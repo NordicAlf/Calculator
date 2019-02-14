@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+    <head>
+        <title>My JS Page</title>
+        <meta charset="UTF-8">
+        <style>
+            h1 {
+                color: darkred;
+            }
+            div {
+                width: 380px;
+                height: 280px;
+                border-color: darkred;
+                border-style: double;
+                border-width: 4px;
+                margin: auto;
+            }
+            .my_button {
+                width: 105px;
+                height: 27px;
+                border-radius: 12%;
+                background: #404040;
+                color: white;
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+            }
+            .my_button2 {
+                width: 58px;
+                height: 27px;
+                border-radius: 12%;
+                background: #404040;
+                color: white;
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+            }
+            input {
+                background: #404040;
+                color: white;
+            }
+        </style>
+        <script>
+            function finalValue() {
+                var x = document.getElementById('display');
+                var z = x.value;
+                x.value = (eval(z)); //преобразует строку на дисплее в формулу
+            }
+            function clearDisplay() {
+                var x = document.getElementById('display');
+                x.value = (x.value).slice(0, -1); //удаляет последний символ на дисплее
+            }
+            function squaringFunction() {
+                var x = document.getElementById('display');
+                x.value = x.value * x.value;
+            }
+            function squareRadical() {
+                var x = document.getElementById('display');
+                x.value = Math.sqrt(x.value);
+            }
+            function percentOfTheNumber() {
+                var x = document.getElementById('display');
+                x.value = eval(x.value)/100;
+            }
+            function button(value) {
+                var x = document.getElementById('display');
+                x.value += value;
+            }
+        </script>
+    </head>
+    <body>
+        <h1 align="center">Калькулятор</h1>
+        <div align="center"><br>
+            <input type="text" style="width: 350px; height: 40px;" id="display" value=""><br><br><br>
+
+            <button onclick="button(7)" class="my_button2">7</button>
+            <button onclick="button(8)" class="my_button2">8</button>
+            <button onclick="button(7)" class="my_button2">9</button>
+            <button onclick="button('/')" class="my_button2">/</button>
+            <button onclick="clearDisplay()" class="my_button">Стереть</button><br><br>
+            <button onclick="button(4)" class="my_button2">4</button>
+            <button onclick="button(5)" class="my_button2">5</button>
+            <button onclick="button(6)" class="my_button2">6</button>
+            <button onclick="button('*')" class="my_button2">*</button>
+            <button onclick="squareRadical()" class="my_button">Корень</button><br><br>
+            <button onclick="button(1)" class="my_button2">1</button>
+            <button onclick="button(2)" class="my_button2">2</button>
+            <button onclick="button(3)" class="my_button2">3</button>
+            <button onclick="button('-')" class="my_button2">-</button>
+            <button onclick="squaringFunction()" class="my_button">Квадрат</button><br><br>
+            <button onclick="button(0)" class="my_button2">0</button>
+            <button onclick="button('.')" class="my_button2">.</button>
+            <button onclick="percentOfTheNumber()" class="my_button2">%</button>
+            <button onclick="button('+')" class="my_button2">+</button>
+            <button onclick="finalValue()" class="my_button">=</button>
+        </div>
+    </body>
+</html>
+
