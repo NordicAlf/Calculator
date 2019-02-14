@@ -1,1 +1,1 @@
-# Calculator
+# My funny calculator on JS
